@@ -19,8 +19,8 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
   background-color: #fff;
   color: #212121;
 }
@@ -39,8 +39,8 @@ body {
 
 .gallery__item {
   position: relative;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .gallery__image:hover {
@@ -133,8 +133,31 @@ body {
   background-size: 60%;
   background-repeat: no-repeat;
 }
-
+.lightbox__btn {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #fff;
+  background-color: transparent;
+  transition: transform var(--animation-duration) linear;
+  cursor: pointer;
+}
 .lightbox__button:hover,
 .lightbox__button:focus {
   background-color: rgba(0, 0, 0, 0.5);
+}
+.lightbox__btn:hover,
+.lightbox__btn:focus {
+  transform: scale(1.2);
+}
+.lightbox__btn--back {
+  left: 10px;
+}
+.lightbox__btn--forward {
+  right: 10px;
 }
